@@ -1,0 +1,160 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+html, body{
+    font-family: 'Fauna One', serif;
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+}
+#root{
+    text-align: justify;
+}
+#root p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h1.title{
+    font-size: 200%;
+}
+h1.author{
+    font-size: 120%;
+    font-weight: normal;
+}
+h1.chapter_title{
+    font-size: 20px;
+}
+h1.chapter_subtitle{
+    font-size: 16px;
+    font-weight: 200;
+}
+.chapter_text:first-letter{
+    font-size: 80px;
+    line-height: 18px;
+    font-family: 'UnifrakturCook', cursive;
+}
+.references {
+    font-size: 12px;
+    -moz-column-width: 20em;
+    -webkit-column-width: 20em;
+    column-width: 20em;
+}
+.references ol li{
+    list-style-position: inside;
+}
+img{
+    display: inline;
+    margin: 5px;
+}
+blockquote{
+    margin-left: 15px;
+    font-size: 16px;
+    font-family: 'Sofia', cursive;
+}
+blockquote:before{
+    float: left;
+    content: url(blockquote.png);
+    margin-right: 10px;
+}
+blockquote .blockquote_author{
+    text-align: right;
+    display: block;
+}
+blockquote .blockquote_author:after, blockquote .blockquote_author:before{
+    content: " - ";
+}
+@media print{
+    html, body, table {
+        font-size: 10pt;
+        counter-reset: page 0;
+    }
+    @page{
+        counter-increment: page;
+        size: 7in 9.25in;
+        margin: 27mm 16mm 27mm 16mm;
+    }
+    div.chapter, div.appendix {
+        page-break-after: always;
+    }
+    div.titlepage {
+        page: blank;
+    }
+    #root p{
+        margin-top: 10pt;
+        margin-bottom: 10pt;
+    }
+    .references{
+        font-size: 7pt;
+    }
+    .noprint{
+        display: none;
+    }
+    .new_line{
+        page-break-before: always;
+    }
+}
+@media screen and (max-width: 767px){
+    #root{
+        margin: auto;
+        width: 90%;
+    }
+    body{
+        padding-top: 25px;
+        overflow: hidden;
+        font-size: 18px;
+    }
+    #root p{
+        line-height: 22px;
+    }
+    div.chapter{
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #999;
+    }
+}
+@media screen and (min-width: 768px){
+    #root{
+        margin: auto;
+        width: 60%;
+    }
+    body{
+        padding-top: 25px;
+    }
+    #root p{
+        line-height: 26px;
+    }
+    div.chapter{
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #999;
+    }
+}
+.text_center{
+    text-align: center;
+}
+.text_right{
+    text-align: right;
+}
+.text_left{
+    text-align: left;
+}
+.text_justify{
+    text-align: justify;
+}
+.space_10{
+    margin-bottom: 10px;
+}
+.space_20{
+    margin-bottom: 20px;
+}
+.float_left{
+    float: left;
+}
+.float_right{
+    float: right;
+}
+.pagecounter{
+    content: counter(page);
+}
